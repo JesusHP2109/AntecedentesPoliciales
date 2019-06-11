@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Agregar persona</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>Agregar persona</h3>
+    <div>
+
+        <!--/*@thymesVar id="persona" type=""*/-->
+        <form action="#" method="post"
+              th:object="${persona}"
+              th:action="@{/personas/save}"
+        >
+
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name"
+                       class="form-controller"
+                       placeholder="ingrese nombre"
+                       th:field="*{nombre}">
+            </div>
+
+            <div class="form-group">
+                <label for="price">apePaterno</label>
+                <input type="text" id="price"
+                       class="form-controller"
+                       placeholder="ingrese persona"
+                       th:field="*{apePaterno}">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Agregar persona
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
